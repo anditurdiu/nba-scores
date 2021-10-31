@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+}
+
+group 'org.ndia.products'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "io.ktor:ktor-client-core:1.6.4"
+    implementation "io.ktor:ktor-client-cio:1.6.4"
+    implementation "io.ktor:ktor-client-jackson:1.6.4"
+
+
+}
+
+
+test {
+    useJUnitPlatform()
+}
