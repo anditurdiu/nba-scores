@@ -18,7 +18,7 @@ import org.ndia.products.model.dto.ResponseDto
 class NbaApi {
 
     private val mapper: ObjectMapper = ObjectMapper().registerModule(KotlinModule())
-    private val url = "https://api-nba-v1.p.rapidapi.com/standings/standard/2021/conference/%s"
+    private val url = "https://api-nba-v1.p.rapidapi.com/standings/standard/2022/conference/%s"
 
     suspend fun getConferenceStandings(conference: Conference): List<Standing> {
         val client = HttpClient(CIO) {
