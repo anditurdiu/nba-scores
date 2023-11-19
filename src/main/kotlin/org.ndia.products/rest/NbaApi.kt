@@ -18,7 +18,7 @@ import org.ndia.products.model.dto.ResponseDto
 class NbaApi {
 
     private val mapper: ObjectMapper = ObjectMapper().registerModule(KotlinModule())
-    private val url = "https://api-nba-v1.p.rapidapi.com/standings/standard/2022/conference/%s"
+    private val url = "https://api-nba-v1.p.rapidapi.com/standings/standard/2023/conference/%s"
 
     suspend fun getConferenceStandings(conference: Conference): List<Standing> {
         val client = HttpClient(CIO) {
@@ -42,7 +42,7 @@ class NbaApi {
     private fun HttpRequestBuilder.buildHeaders() {
         headers.apply(fun HeadersBuilder.() {
             append("x-rapidapi-host", "api-nba-v1.p.rapidapi.com")
-            append("x-rapidapi-key", "INSERT-API-KEY-HERE")
+            append("x-rapidapi-key", "4f4c20b41fmsh697f40a872efa3cp12dfadjsn6d0797b920e2")
         })
     }
 }
