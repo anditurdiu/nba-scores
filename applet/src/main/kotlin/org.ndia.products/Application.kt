@@ -62,38 +62,38 @@ fun loadParticipants(): List<Participant> {
 private fun andi(): Participant {
     val east = listOf(
         BOSTON_CELTICS,
-        MILWAUKEE_BUCKS,
-        CLEVELAND_CAVALIERS,
-        PHILADELPHIA_76,
         NEW_YORK_KNICKS,
-        ATLANTA_HAWKS,
-        MIAMI_HEAT,
-        BROOKLYN_NETS,
+        PHILADELPHIA_76,
+        MILWAUKEE_BUCKS,
         INDIANA_PACERS,
         ORLANDO_MAGIC,
-        CHICAGO_BULLS,
+        CLEVELAND_CAVALIERS,
         TORONTO_RAPTORS,
-        CHARLOTTE_HORNETS,
+        ATLANTA_HAWKS,
+        CHICAGO_BULLS,
+        MIAMI_HEAT,
         DETROIT_PISTONS,
-        WASHINGTON_WIZARDS
+        CHARLOTTE_HORNETS,
+        BROOKLYN_NETS,
+        WASHINGTON_WIZARDS,
     )
 
     val west = listOf(
-        DENVER_NUGGETS,
-        PHOENIX_SUNS,
-        SACRAMENTO_KINGS,
-        MEMPHIS_GRIZZLIES,
-        LOS_ANGELES_LAKERS,
-        GOLDEN_STATE_WARRIORS,
-        LOS_ANGELES_CLIPPERS,
-        NEW_ORLEANS_PELICANS,
-        MINNESOTA_TIMBERWOLVES,
-        UTAH_JAZZ,
-        DALLAS_MAVERICKS,
         OKLAHOMA_CITY_THUNDER,
+        MINNESOTA_TIMBERWOLVES,
+        DENVER_NUGGETS,
+        DALLAS_MAVERICKS,
+        PHOENIX_SUNS,
+        LOS_ANGELES_CLIPPERS,
+        SACRAMENTO_KINGS,
+        LOS_ANGELES_LAKERS,
+        NEW_ORLEANS_PELICANS,
+        GOLDEN_STATE_WARRIORS,
+        SAN_ANTONIO_SPURS,
+        MEMPHIS_GRIZZLIES,
         HOUSTON_ROCKETS,
+        UTAH_JAZZ,
         PORTLAND_TRAIL_BLAZERS,
-        SAN_ANTONIO_SPURS
     )
 
     return Participant("Andi", east, west)
@@ -101,39 +101,39 @@ private fun andi(): Participant {
 
 private fun jurgi(): Participant {
     val east = listOf(
-        CLEVELAND_CAVALIERS,
         MILWAUKEE_BUCKS,
         BOSTON_CELTICS,
-        DETROIT_PISTONS,
-        CHICAGO_BULLS,
+        ORLANDO_MAGIC,
         NEW_YORK_KNICKS,
+        INDIANA_PACERS,
+        CLEVELAND_CAVALIERS,
         PHILADELPHIA_76,
         ATLANTA_HAWKS,
-        ORLANDO_MAGIC,
         MIAMI_HEAT,
-        BROOKLYN_NETS,
-        INDIANA_PACERS,
+        DETROIT_PISTONS,
         TORONTO_RAPTORS,
+        BROOKLYN_NETS,
         WASHINGTON_WIZARDS,
-        CHARLOTTE_HORNETS
+        CHICAGO_BULLS,
+        CHARLOTTE_HORNETS,
     )
 
     val west = listOf(
-        DENVER_NUGGETS,
-        LOS_ANGELES_CLIPPERS,
-        PHOENIX_SUNS,
-        LOS_ANGELES_LAKERS,
-        SACRAMENTO_KINGS,
-        MINNESOTA_TIMBERWOLVES,
-        NEW_ORLEANS_PELICANS,
-        OKLAHOMA_CITY_THUNDER,
-        GOLDEN_STATE_WARRIORS,
         DALLAS_MAVERICKS,
-        MEMPHIS_GRIZZLIES,
+        OKLAHOMA_CITY_THUNDER,
+        DENVER_NUGGETS,
+        MINNESOTA_TIMBERWOLVES,
+        PHOENIX_SUNS,
+        SACRAMENTO_KINGS,
+        LOS_ANGELES_LAKERS,
         HOUSTON_ROCKETS,
-        PORTLAND_TRAIL_BLAZERS,
+        GOLDEN_STATE_WARRIORS,
+        NEW_ORLEANS_PELICANS,
+        MEMPHIS_GRIZZLIES,
         SAN_ANTONIO_SPURS,
-        UTAH_JAZZ
+        UTAH_JAZZ,
+        LOS_ANGELES_CLIPPERS,
+        PORTLAND_TRAIL_BLAZERS
     )
 
     return Participant("Jurgi", east, west)
@@ -141,41 +141,41 @@ private fun jurgi(): Participant {
 
 private fun stoja(): Participant {
     val east = listOf(
-        MILWAUKEE_BUCKS,
-        CLEVELAND_CAVALIERS,
         BOSTON_CELTICS,
         NEW_YORK_KNICKS,
-        BROOKLYN_NETS,
         PHILADELPHIA_76,
-        INDIANA_PACERS,
-        ATLANTA_HAWKS,
         ORLANDO_MAGIC,
-        DETROIT_PISTONS,
+        MILWAUKEE_BUCKS,
+        INDIANA_PACERS,
+        CLEVELAND_CAVALIERS,
         MIAMI_HEAT,
         TORONTO_RAPTORS,
+        DETROIT_PISTONS,
+        CHARLOTTE_HORNETS,
+        ATLANTA_HAWKS,
         CHICAGO_BULLS,
-        WASHINGTON_WIZARDS,
-        CHARLOTTE_HORNETS
+        WASHINGTON_WIZARDS
+
     )
 
     val west = listOf(
-        DENVER_NUGGETS,
-        PHOENIX_SUNS,
-        DALLAS_MAVERICKS,
         OKLAHOMA_CITY_THUNDER,
-        LOS_ANGELES_LAKERS,
-        LOS_ANGELES_CLIPPERS,
-        NEW_ORLEANS_PELICANS,
-        GOLDEN_STATE_WARRIORS,
+        DALLAS_MAVERICKS,
+        PHOENIX_SUNS,
         MINNESOTA_TIMBERWOLVES,
+        LOS_ANGELES_LAKERS,
+        NEW_ORLEANS_PELICANS,
         MEMPHIS_GRIZZLIES,
-        SAN_ANTONIO_SPURS,
+        DENVER_NUGGETS,
         SACRAMENTO_KINGS,
+        GOLDEN_STATE_WARRIORS,
+        HOUSTON_ROCKETS,
+        SAN_ANTONIO_SPURS,
+        LOS_ANGELES_CLIPPERS,
         UTAH_JAZZ,
-        PORTLAND_TRAIL_BLAZERS,
-        HOUSTON_ROCKETS
+        PORTLAND_TRAIL_BLAZERS
+
     )
 
     return Participant("Stoja", east, west)
 }
-
