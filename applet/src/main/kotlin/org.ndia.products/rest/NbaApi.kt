@@ -29,7 +29,7 @@ class NbaApi {
             .configure(KotlinFeature.StrictNullChecks, false)
             .build()
     )
-    private val url = "https://api-nba-v1.p.rapidapi.com/standings/standard/2023/conference/%s"
+    private val url = "https://api-nba-v1.p.rapidapi.com/standings/standard/2024/conference/%s"
 
     suspend fun getConferenceStandings(conference: Conference): List<Standing> {
         val client = HttpClient(CIO) {

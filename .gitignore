@@ -1,43 +1,37 @@
-.DS_Store
-.idea/shelf
-/confluence/target
-/dependencies/repo
-/android.tests.dependencies
-/dependencies/android.tests.dependencies
-/dist
-/local
-/gh-pages
-/ideaSDK
-/clionSDK
-/android-studio/sdk
-out/
-/tmp
-/intellij
-workspace.xml
-*.versionsBackup
-/idea/testData/debugger/tinyApp/classes*
-/jps-plugin/testData/kannotator
-/js/js.translator/testData/out/
-/js/js.translator/testData/out-min/
-/js/js.translator/testData/out-pir/
-.gradle/
-build/
-!**/src/**/build
-!**/test/**/build
-*.iml
-!**/testData/**/*.iml
-.idea/*
-node_modules/
-.rpt2_cache/
-libraries/tools/kotlin-test-js-runner/lib/
-local.properties
-buildSrcTmp/
-distTmp/
-outTmp/
-/test.output
-/kotlin-native/dist
-kotlin-ide/
-gradlew
-gradlew.bat
-gradle/wrapper/gradle-wrapper.jar
-gradle/wrapper/gradle-wrapper.properties
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as
+# password, private keys, and other secrets. These should not be part of version 
+# control as they are data points which are potentially sensitive and subject 
+# to change depending on the environment.
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore transient lock info files created by terraform apply
+.terraform.tfstate.lock.info
+
+# Include override files you do wish to add to version control using negated pattern
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
