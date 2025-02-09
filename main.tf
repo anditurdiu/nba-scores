@@ -32,7 +32,7 @@ resource "aws_lambda_function" "nba_scores_lambda" {
   filename      = "nba-scores.zip"
   function_name = "nba-scores"
   role          = aws_iam_role.lambda_role.arn
-  handler       = "nba.scores.Handler::handleRequest"
+  handler       = "org.ndia.products.Handler::handleRequest"
   runtime       = "java17"  # Kotlin runs on JVM
   memory_size   = 128
   timeout       = 10
