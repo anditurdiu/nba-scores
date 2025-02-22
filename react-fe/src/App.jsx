@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Basketball } from "lucide-react";
+import { Card, CardHeader, CardTitle, CardContent } from "./components/ui/card";
+import { Volleyball } from "lucide-react";
 
 const App = () => {
   const [content, setContent] = useState("");
@@ -9,29 +9,46 @@ const App = () => {
 
   useEffect(() => {
     const fetchContent = async () => {
-      try {
-        // Replace this URL with your actual endpoint
-        const response = await fetch(
-          "https://6n7cjygll3.execute-api.eu-central-1.amazonaws.com/prod/scores"
-        );
-        const data = await response.json();
-        setContent(data.htmlContent);
-        setLoading(false);
-      } catch (err) {
-        setError("Failed to load content. Please try again later.");
-        setLoading(false);
-      }
+        try {
+            const response = await fetch("https://6n7cjygll3.execute-api.eu-central-1.amazonaws.com/prod/scores");
+
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+
+            const data = await response.text(); // Use .text() to get the raw response
+            console.log('Raw Response:', data); // Log the raw response for debugging
+            const decodedContent = decodeUnicode(data); // Decode the Unicode characters
+            setContent(decodedContent); // Set the decoded HTML content
+            setLoading(false);
+        } catch (err) {
+            console.error(err);
+            setError("Failed to load content. Please try again later.");
+            setLoading(false);
+        }
+    };
+
+    // Function to decode Unicode HTML characters
+    const decodeUnicode = (str) => {
+        return str.replace(/\\u003c/g, '<') // Replace \u003c with <
+            .replace(/\\u003e/g, '>') // Replace \u003e with >
+            .replace(/\\u0026/g, '&') // Replace \u0026 with &
+            .replace(/\\u0022/g, '"') // Replace \u0022 with "
+            .replace(/\\u0027/g, "'"); // Replace \u0027 with '
     };
 
     fetchContent();
-  }, []);
+}, []);
+
+
+
 
   return (
     <div className="min-h-screen bg-orange-50 p-8">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-center mb-8 space-x-4">
-          <Basketball className="w-12 h-12 text-orange-600" />
+          <Volleyball className="w-12 h-12 text-orange-600" />
           <h1 className="text-4xl font-bold text-orange-900">
             Basketball Zone
           </h1>
@@ -45,21 +62,23 @@ const App = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {loading ? (
-              <div className="flex items-center justify-center p-8">
-                <div className="w-8 h-8 border-4 border-orange-600 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-            ) : error ? (
-              <div className="text-red-600 p-4 text-center">{error}</div>
-            ) : (
-              <div
-                className="prose max-w-none"
-                dangerouslySetInnerHTML={{
-                  __html: content || "No content available",
-                }}
-              />
-            )}
-          </CardContent>
+    {loading ? (
+        <div className="flex items-center justify-center p-8">
+            <div className="w-8 h-8 border-4 border-orange-600 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+    ) : error ? (
+        <div className="text-red-600 p-4 text-center">{error}</div>
+    ) : (
+        <div
+            className="prose max-w-none"
+            dangerouslySetInnerHTML={{
+                __html: content || "No content available",
+            }}
+        />
+    )}
+</CardContent>
+
+
         </Card>
 
         {/* Footer */}
