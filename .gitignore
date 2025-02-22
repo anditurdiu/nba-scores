@@ -99,3 +99,8 @@ kotlin-ide/
 .kotlin/
 .teamcity/
 .npmrc
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
