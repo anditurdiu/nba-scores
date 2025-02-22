@@ -12,7 +12,7 @@ const App = () => {
       try {
         // Replace this URL with your actual endpoint
         const response = await fetch(
-          "https://api.example.com/basketball-content"
+          "https://6n7cjygll3.execute-api.eu-central-1.amazonaws.com/prod/scores"
         );
         const data = await response.json();
         setContent(data.htmlContent);
